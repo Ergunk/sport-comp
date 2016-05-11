@@ -17,6 +17,10 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="CoreBundle">CoreBundle\CoreBundle</parameter>
+      <parameter key="AccueilBundle">AccueilBundle\AccueilBundle</parameter>
+      <parameter key="SportsBundle">SportsBundle\SportsBundle</parameter>
+      <parameter key="CampsBundle">CampsBundle\CampsBundle</parameter>
+      <parameter key="DefisBundle">DefisBundle\DefisBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -1494,7 +1498,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5733360340d228.70575958</argument>
+            <argument>5733454ac58871.69213884</argument>
           </service>
         </argument>
       </argument>
@@ -1623,7 +1627,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5733360340d228.70575958</argument>
+            <argument>5733454ac58871.69213884</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2412,6 +2416,22 @@
       <call method="addPath">
         <argument>C:\wamp\www\sport-comp\src\CoreBundle/Resources/views</argument>
         <argument>Core</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\sport-comp\src\AccueilBundle/Resources/views</argument>
+        <argument>Accueil</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\sport-comp\src\SportsBundle/Resources/views</argument>
+        <argument>Sports</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\sport-comp\src\CampsBundle/Resources/views</argument>
+        <argument>Camps</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\sport-comp\src\DefisBundle/Resources/views</argument>
+        <argument>Defis</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp\www\sport-comp\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>

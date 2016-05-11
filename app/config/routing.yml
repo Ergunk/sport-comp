@@ -1,3 +1,23 @@
+contact:
+    resource: "@ContactBundle/Resources/config/routing.yml"
+    prefix:   /
+
+defis:
+    resource: "@DefisBundle/Resources/config/routing.yml"
+    prefix:   /
+
+camps:
+    resource: "@CampsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sports:
+    resource: "@SportsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+accueil:
+    resource: "@AccueilBundle/Resources/config/routing.yml"
+    prefix:   /
+
 core:
     resource: "@CoreBundle/Resources/config/routing.yml"
     prefix:   /

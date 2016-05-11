@@ -1,0 +1,3 @@
+camps_homepage:
+    path:     /
+    defaults: { _controller: CampsBundle:Default:index }
