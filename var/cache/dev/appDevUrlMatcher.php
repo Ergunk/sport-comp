@@ -100,6 +100,72 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // login_homepage
+                if ($pathinfo === '/login') {
+                    return array (  '_controller' => 'LoginBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login_homepage',);
+                }
+
+                // login_check
+                if ($pathinfo === '/login_check') {
+                    return array('_route' => 'login_check');
+                }
+
+            }
+
+            // logout
+            if ($pathinfo === '/logout') {
+                return array('_route' => 'logout');
+            }
+
+        }
+
+        // contact_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'contact_homepage');
+            }
+
+            return array (  '_controller' => 'ContactBundle\\Controller\\DefaultController::indexAction',  '_route' => 'contact_homepage',);
+        }
+
+        // defis_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'defis_homepage');
+            }
+
+            return array (  '_controller' => 'DefisBundle\\Controller\\DefaultController::indexAction',  '_route' => 'defis_homepage',);
+        }
+
+        // camps_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'camps_homepage');
+            }
+
+            return array (  '_controller' => 'CampsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'camps_homepage',);
+        }
+
+        // sports_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'sports_homepage');
+            }
+
+            return array (  '_controller' => 'SportsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'sports_homepage',);
+        }
+
+        // accueil_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'accueil_homepage');
+            }
+
+            return array (  '_controller' => 'AccueilBundle\\Controller\\DefaultController::indexAction',  '_route' => 'accueil_homepage',);
+        }
+
         // core_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

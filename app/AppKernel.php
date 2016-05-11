@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new CampsBundle\CampsBundle(),
             new DefisBundle\DefisBundle(),
             new ContactBundle\ContactBundle(),
+            new LoginBundle\LoginBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
